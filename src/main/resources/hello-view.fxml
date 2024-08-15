@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: E0FFFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.com.example.demo1.Controller">
+   <children>
+      <Label layoutX="33.0" layoutY="79.0" text="FleetMap:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="120.0" text="Output:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="159.0" text="Result:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="logFielder" layoutX="336.0" layoutY="245.0" text="Log">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fleetMapField" layoutX="129.0" layoutY="82.0" prefHeight="25.0" prefWidth="469.0" />
+      <TextField fx:id="outputField" layoutX="129.0" layoutY="123.0" prefHeight="25.0" prefWidth="469.0" />
+      <Button fx:id="fleetMapBut" contentDisplay="GRAPHIC_ONLY" layoutX="610.0" layoutY="76.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" text="Button">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons-folder.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="outputBut" contentDisplay="GRAPHIC_ONLY" layoutX="611.0" layoutY="117.0" mnemonicParsing="false" text="Button">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons-folder.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="logBut" contentDisplay="GRAPHIC_ONLY" layoutX="611.0" layoutY="241.0" mnemonicParsing="false" text="Button">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon-go.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <RadioButton fx:id="sharedFileRadioButton" layoutX="129.0" layoutY="166.0" mnemonicParsing="false" text="SharedFile" />
+      <RadioButton fx:id="individualsFileRadioButton" layoutX="249.0" layoutY="166.0" mnemonicParsing="false" text="Individual Files" />
+   </children>
+</AnchorPane>
