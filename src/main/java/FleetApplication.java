@@ -1,4 +1,4 @@
-package main.java.com.example.demo1;
+package main.java;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,14 +6,12 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 
 public class FleetApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        URL fxml = new URL("file:\\C:\\Users\\Artem\\Desktop\\gs-validating-form-input-main\\untitled\\src\\main\\resources\\hello-view.fxml");
-        Scene scene = new Scene(fxmlLoader.load(fxml), 700, 400);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main/resources/hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 700, 400);
         stage.setTitle("App");
         stage.setScene(scene);
         stage.show();

@@ -1,11 +1,12 @@
-package main.java.com.example.demo1;
+package main.java;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
-//import ru.oniip.fleetmap.parser.util.FleetMapParser;
+import ru.oniip.fleetmap.parser.util.FleetMapParser;
+
 
 import java.io.File;
 import java.net.URL;
@@ -49,7 +50,7 @@ public class Controller implements Initializable {
     private File selectFile(){
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Выберите файл");
-        FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter(".xlsx","*.xlsx");
+        FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter(".xlsm","*.xlsm");
         fileChooser.getExtensionFilters().add(filter);
         return fileChooser.showOpenDialog(null);
     }
@@ -148,9 +149,9 @@ public class Controller implements Initializable {
 
     private void parse(String excelFile, String outputDir, Boolean isManyFiles){
         if (isManyFiles) {
-//            FleetMapParser.createFilesIgnoredListSsi(excelFile,outputDir);
+            FleetMapParser.createFileIgnoredListSsi(excelFile,outputDir);
         }else {
-//            FleetMapParser.createFilesIgnoredListSsi(excelFile,outputDir);
+            FleetMapParser.createFilesIgnoredListSsi(excelFile,outputDir);
         }
     }
 
